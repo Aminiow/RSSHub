@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h1 style="text-align: center; margin-top: 0">Admin Dashboard</h1>
+      <nav>
+        <a href="{{ url_for('index') }}">Back to Feeds</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% if session.get('role') == 'owner' %} |
+        <a href="{{ url_for('manage_users') }}">Manage Admins</a>
+        {% endif %}
+      </nav>
+
+      {% if message %}
+      <div class="message {{ message_type }}">{{ message }}</div>
+      {% endif %}
+
+      <h2>Current Feeds</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>URL</th>
+          <th>Actions</th>
+        </tr>
+        {% if feeds %} {% for id, name, url in feeds %}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ name }}</td>
+          <td><a href="{{ url }}" target="_blank">{{ url }}</a></td>
+          <td>
+            <a
+              href="{{ url_for('dashboard', remove=id) }}"
+              onclick="return confirm('Are you sure you want to remove this feed and all its items?');"
+              >Remove</a
+            >
+          </td>
+        </tr>
+        {% endfor %} {% else %}
+        <tr>
+          <td colspan="4">No feeds added yet.</td>
+        </tr>
+        {% endif %}
+      </table>
+
+      <h2>Add New Feed</h2>
+      <form method="post">
+        <label for="feed_name">Feed Name:</label>
+        <input
+          type="text"
+          id="feed_name"
+          name="name"
+          placeholder="e.g., My Favorite Blog"
+          required
+        /><br />
+        <label for="feed_url">RSS Feed URL:</label>
+        <input
+          type="url"
+          id="feed_url"
+          name="url"
+          placeholder="e.g., https://example.com/rss.xml"
+          size="60"
+          required
+        /><br />
+        <input type="submit" value="Add Feed" />
+      </form>
+    </div>
+  </body>
+</html>

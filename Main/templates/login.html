@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h1 style="text-align: center; margin-top: 0">Admin Login</h1>
+      <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+        <input type="submit" value="Login" />
+      </form>
+      {% if error %}
+      <p class="message error">{{ error }}</p>
+      {% endif %}
+      <p style="text-align: center; margin-top: 20px">
+        <a href="{{ url_for('index') }}">Back to Feeds</a>
+      </p>
+    </div>
+  </body>
+</html>

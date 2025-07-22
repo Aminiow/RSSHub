@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Admin Accounts</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <h1 style="text-align: center; margin-top: 0">Manage Admin Accounts</h1>
+      <nav>
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a> |
+        <a href="{{ url_for('logout') }}">Logout</a>
+      </nav>
+
+      {% if message %}
+      <div class="message {{ message_type }}">{{ message }}</div>
+      {% endif %}
+
+      <h2>Current Admin Users</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+        {% if users %} {% for id, username, role in users %}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ username }}</td>
+          <td>{{ role }}</td>
+          <td>
+            {% if role != 'owner' and id != session.get('user_id') %}
+            <a
+              href="{{ url_for('manage_users', remove=id) }}"
+              onclick="return confirm('Are you sure you want to remove user \'{{ username }}\'?');"
+              >Remove</a
+            >
+            {% else %} &mdash; {% endif %}
+          </td>
+        </tr>
+        {% endfor %} {% else %}
+        <tr>
+          <td colspan="4">No admin users found.</td>
+        </tr>
+        {% endif %}
+      </table>
+
+      <h2>Add New Admin User</h2>
+      <form method="post">
+        <label for="new_username">Username:</label>
+        <input type="text" id="new_username" name="username" required /><br />
+        <label for="new_password">Password:</label>
+        <input
+          type="password"
+          id="new_password"
+          name="password"
+          required
+        /><br />
+        <label for="new_role">Role:</label>
+        <select id="new_role" name="role" required>
+          <option value="admin">Admin</option>
+          <option value="owner">Owner</option></select
+        ><br />
+        <input type="submit" value="Add User" />
+      </form>
+    </div>
+  </body>
+</html>
