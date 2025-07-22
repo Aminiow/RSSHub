@@ -47,23 +47,23 @@
 ### **Steps**  
 1. Clone the repo:  
    ```bash  
-   git clone https://github.com/yourusername/RSSHub.git  
+   git clone https://github.com/Aminiow/RSSHub.git  
    cd RSSHub  
    ```  
 2. Install dependencies:  
    ```bash  
    pip install -r requirements.txt  
    ```  
-3. Initialize the database:  
+3. Initialize the database:   [Combined]
    ```bash  
    python init_db.py  
    ```  
-4. Run the server:  
+4. Run the server:   [Updated]
    ```bash  
-   python app.py  
+   python main.py  
    ```  
-5. Access the app at:  
-   🔗 `http://127.0.0.1:5000`  
+5. Access the app at:   
+   🔗 `http://127.0.0.1:5000`   |   `http://localhost:5000`
 
 ---
 ## **🚀 Usage**  
@@ -93,7 +93,7 @@ The app includes REST endpoints for developers:
 
 ---
 
-### **📜 License**  
+## **📜 License**  
 **GPL v3** – Free to use, modify, and distribute under the terms of the GPL v3 license.  
 
 ---
