@@ -1,0 +1,125 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background: #f0f2f5; 
+    color: #333; 
+    line-height: 1.6; 
+}
+h1, h2, h3 { 
+    color: #444; 
+    margin-top: 1.5em; 
+    margin-bottom: 0.8em; 
+}
+h1 { 
+    text-align: center; 
+    color: #2c3e50; 
+}
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    background: white; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+th, td { 
+    padding: 12px 15px; 
+    border: 1px solid #e0e0e0; 
+    text-align: left; 
+}
+th { 
+    background: #f8f8f8; 
+    font-weight: bold; 
+    color: #555; 
+}
+tr:nth-child(even) { 
+    background-color: #f9f9f9; 
+}
+a { 
+    color: #007bff; 
+    text-decoration: none; 
+    transition: color 0.2s ease-in-out; 
+}
+a:hover { 
+    text-decoration: underline; 
+    color: #0056b3; 
+}
+input[type=text], 
+input[type=password], 
+input[type=url], 
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Account for padding and border */
+    box-sizing: border-box;
+}
+input[type=submit], button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #28a745;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+}
+input[type=submit]:hover, button:hover { 
+    background: #218838; 
+}
+.message {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+.message.error { 
+    background: #f8d7da; 
+    color: #721c24; 
+    border-color: #f5c6cb; 
+}
+.message.success { 
+    background: #d4edda; 
+    color: #155724; 
+    border-color: #c3e6cb; 
+}
+.feed-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.feed-group h2 { 
+    margin-top: 0; 
+    color: #34495e; 
+}
+.small-link { 
+    font-size: 0.85em; 
+    color: #777; 
+    margin-left: 10px; 
+}
+nav { 
+    text-align: center; 
+    margin-bottom: 25px; 
+}
+nav a { 
+    margin: 0 15px; 
+    font-weight: bold; 
+}
+form { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+}
+form label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    color: #555; 
+}
