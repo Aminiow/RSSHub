@@ -8,13 +8,13 @@
 ---
 
 ## **📖 Table of Contents**  
-- [Features](#✨-features)  
-- [Tech Stack](#🛠️-tech-stack)  
-- [Installation](#⚙️-installation)  
-- [Usage](#🚀-usage)  
-- [API Reference](#🔌-api-reference)  
-- [Contributing](#🤝-contributing)  
-- [License](#📜-license)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [API Reference](#api-reference)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
 ---
 
