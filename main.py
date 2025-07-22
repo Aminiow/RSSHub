@@ -9,7 +9,7 @@ from functools import wraps
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'  # Change this to a strong, random key!
 
-DB = 'rss_app.db'
+DB = 'RSSHub.db'
 FETCH_INTERVAL = 300  # 5 minutes (in seconds)
 
 # --- Main CSS for all pages ---
