@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Feed Items</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>RSS Feed Items</h1>
+  <nav>
+    <a href="{{ url_for('dashboard') }}">Admin Dashboard</a>
+  </nav>
+
+  {% if grouped_items %}
+    {% for feed in grouped_items %}
+      <div class="feed-group">
+        <h2>{{ feed.feed_name }} <small class="small-link">(<a href="{{ feed.feed_url }}" target="_blank">Feed Link</a>)</small></h2>
+        <table>
+            <tr><th>Title</th><th>Published</th></tr>
+            {% if feed.feed_items %}
+                {% for title, link, published in feed.feed_items %}
+                <tr>
+                    <td><a href="{{ link }}" target="_blank">{{ title }}</a></td>
+                    <td>{{ published }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr><td colspan="2">No items found for this feed.</td></tr>
+            {% endif %}
+        </table>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p style="text-align: center;">No feeds added yet. Please add some from the <a href="{{ url_for('dashboard') }}">Admin Dashboard</a>.</p>
+  {% endif %}
+</body>
+</html>
