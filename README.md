@@ -85,9 +85,8 @@
 
 > **💡 Use the following credentials to log in as the default admin**:
 
-🔸 Username: `owner`
-
-🔸 Password: `ownerpass`
+- 👤 Username: `owner`
+- 🔒 Password: `ownerpass`
 
 ---
 
