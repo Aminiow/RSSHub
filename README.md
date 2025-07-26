@@ -118,6 +118,18 @@ Made with ❤️ by **Aminiow**.
 
 🔗 **Happy Reading!** 📰✨  
 
+---
+
+## **🔐 Default Login (Admin Panel)**
+
+> **💡 Use the following credentials to log in as the default admin**:
+
+Username: `owner`
+
+Password: `ownerpass`
+
+---
+
 ---  
 
 ### **Preview**  
