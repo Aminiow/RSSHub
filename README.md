@@ -21,6 +21,7 @@
 - [🔌 API Reference](#api-reference)  
 - [🤝 Contributing](#contributing)  
 - [📜 License](#license)  
+- [🔐 Default Login (Admin Panel)](#defualt-login)
 
 ---
 
