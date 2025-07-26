@@ -18,10 +18,10 @@
 - [🛠️ Tech Stack](#tech-stack)  
 - [⚙️ Installation](#installation)  
 - [🚀 Usage](#usage)  
+- [🔐 Default Login (Admin Panel)](#defualt-login)
 - [🔌 API Reference](#api-reference)  
 - [🤝 Contributing](#contributing)  
 - [📜 License](#license)  
-- [🔐 Default Login (Admin Panel)](#defualt-login)
 
 ---
 
@@ -81,6 +81,16 @@
 
 ---
 
+## **🔐 Default Login (Admin Panel)**
+
+> **💡 Use the following credentials to log in as the default admin**:
+
+Username: `owner`
+
+Password: `ownerpass`
+
+---
+
 ## **🔌 API Reference**   [Coming Soon!]
 The app includes REST endpoints for developers:  
 🔸 `GET /api/feeds` – List all feeds.  
@@ -118,18 +128,6 @@ Made with ❤️ by **Aminiow**.
 **Need more details?** Check the [Wiki](https://github.com/yourusername/RSSHub/wiki) or open an **Issue**!  
 
 🔗 **Happy Reading!** 📰✨  
-
----
-
-## **🔐 Default Login (Admin Panel)**
-
-> **💡 Use the following credentials to log in as the default admin**:
-
-Username: `owner`
-
-Password: `ownerpass`
-
----
 
 ---  
 
